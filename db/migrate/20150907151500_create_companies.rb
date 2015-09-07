@@ -3,8 +3,8 @@ class CreateCompanies < ActiveRecord::Migration
     create_table :companies do |t|
       t.string :name
       t.string :stock_symbol
-      t.timestamps
 
+      t.timestamps
     end
   end
 end
