@@ -6,16 +6,19 @@ class SymbolNameImporter
 
   def initialize(filename)
     @filename = filename
+    @array_of_arrays = get_array_of_arrays
   end
 
-  def import
+  def get_array_of_arrays
     raw_text = File.read(filename)
     no_literal_quotes = raw_text.gsub("\"", "")
     split_lines = no_literal_quotes.split(/[\r\n]+/)
-    arrays_of_lines = split_lines.map {|l| l.split(",")}
-
+    split_lines.map {|l| l.split(",")}
   end
 
+  def build_company_objects
+
+  end
 
 end
 
