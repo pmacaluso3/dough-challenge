@@ -1,10 +1,7 @@
+<a href="/">Back to search form</a>
+
+
 <h1>
   30-day history for <%= @company.name %>
 </h1>
 <img src=<%= @chart %>>
-<%= @averaged_days %>
-<img src = <%=  Gchart.line( :data => [17, 17, 11, 8, 2],
-              :axis_with_labels => ['x', 'y'],
-              :axis_labels => [['J', 'F', 'M', 'A', 'M']],
-              :axis_range => [nil, [2,17,5]]) %>
->
