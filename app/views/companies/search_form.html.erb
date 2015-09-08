@@ -1,10 +1,16 @@
 
+<p>
+  Enter partial name of a company or stock symbol to see its 30-business-day price history
+</p>
 
-<form action="companies" method="post">
-  <input type="hidden" name="authenticity_token">
-  <input type="text" name="query" placeholder="Enter partial name of company or stock symbol">
-  <input type="submit">
-</form>
+<div>
+  <form action="companies" method="post">
+    <input type="hidden" name="authenticity_token">
+    <input type="text" name="query" placeholder="">
+    <br><br>
+    <input type="submit">
+  </form>
+</div>
 
 <script>
   $(document).ready(function() {
