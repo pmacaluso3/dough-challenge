@@ -15,6 +15,11 @@ class CompaniesController < ApplicationController
   end
 
   def show
-
+    yahoo_client = YahooFinance::Client.new
+    @company = Company.find_by(id: params[:id])
+    unaveraged_data = yahoo_client.historical_quotes(@company.stock_symbol, {start_date: Time::now - 50.days, end_date: Time::now})
+    @averaged_days = unaveraged_data.map do |day|
+      [day.open.to_f, day.close.to_f, day.high.to_f, day.low.to_f].reduce(:+)/4.0
+    end.first(30)
   end
 end
