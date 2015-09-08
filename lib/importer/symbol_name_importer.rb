@@ -22,7 +22,7 @@ class SymbolNameImporter
       stock_symbol = company_array[0]
       name = company_array[1]
       this_company = Company.find_or_initialize_by(stock_symbol: stock_symbol)
-      if this_company.new_record? && this_company.stock_symbol != 'Symbol'
+      if this_company.id == nil && this_company.stock_symbol != 'Symbol'
         this_company.name = name
         this_company.save
       end
