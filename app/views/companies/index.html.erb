@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>Symbol</th>
+    <th>Name</th>
+  </tr>
+  <% @companies.each do |company| %>
+    <tr>
+      <td><a href="/companies/<%= company.id %>"><%= company.stock_symbol %></a></td>
+      <td><%= company.name %></td>
+    </tr>
+  <% end %>
+</table>

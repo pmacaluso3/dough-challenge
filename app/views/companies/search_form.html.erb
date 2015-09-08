@@ -1,0 +1,14 @@
+
+
+<form action="companies" method="post">
+  <input type="hidden" name="authenticity_token">
+  <input type="text" name="query" placeholder="Enter partial name of company or stock symbol">
+  <input type="submit">
+</form>
+
+<script>
+  $(document).ready(function() {
+    var token = $("meta[name='csrf-token']").attr("content");
+    $("input[name='authenticity_token']").attr("value", token)
+  })
+</script>
