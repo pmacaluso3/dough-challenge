@@ -31,7 +31,7 @@ group :development, :test do
 end
 
 gem 'yahoo-finance'
-gem 'business_time'
+gem 'googlecharts'
 
 
 # Use ActiveModel has_secure_password
