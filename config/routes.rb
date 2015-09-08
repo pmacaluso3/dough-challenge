@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   post 'companies' => 'companies#search'
-  resources :companies, only: [:index, :show]
+  # resources :companies, only: [:index, :show]
+  get '/companies' => 'companies#index'
+  get '/companies/:id' => 'companies#show'
   get '/' => 'companies#search_form'
     # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

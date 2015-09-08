@@ -1,10 +1,9 @@
 class CompaniesController < ApplicationController
   def search_form
-
   end
 
   def index
-
+    @companies = Company.first(20)
   end
 
   def search
