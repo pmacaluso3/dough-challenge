@@ -1,15 +1,17 @@
 
-<p>
+<p class="jumbotron">
   Enter partial name of a company or stock symbol to see its 30-business-day price history
 </p>
 
-<div>
-  <form action="companies" method="post">
-    <input type="hidden" name="authenticity_token">
-    <input type="text" name="query" placeholder="">
-    <br><br>
-    <input type="submit">
-  </form>
+<div class="card">
+  <div class="card-text">
+    <form action="companies" method="post">
+      <input type="hidden" name="authenticity_token">
+      <input type="text" name="query" placeholder="">
+      <br><br>
+      <input type="submit">
+    </form>
+  </div>
 </div>
 
 <script>

@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+ .jumbotron {
+  text-align: center;
+  font-size: 2em
+ }
+
+ .thirty_day_chart {
+  text-align: center;
+ }
+
+ .card {
+  text-align: center;
+  background-color:
+ }
+
+ .header {
+  font-weight: bold;
+  font-size: 1.5em;
+ }
+
+ img {
+  display: inline-block;
+ }
+
+ td, th{
+  min-width: 100px;
+  text-align: center;
+
+ }
