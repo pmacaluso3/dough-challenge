@@ -5,7 +5,7 @@
   </tr>
   <% @companies.each do |company| %>
     <tr>
-      <td><%= company.stock_symbol %></td>
+      <td><a href="/companies/<%= company.id %>"><%= company.stock_symbol %></a></td>
       <td><%= company.name %></td>
     </tr>
   <% end %>
